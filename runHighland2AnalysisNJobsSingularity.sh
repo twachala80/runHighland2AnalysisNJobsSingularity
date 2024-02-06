@@ -1,12 +1,12 @@
 #!/bin/sh
 #######################################################################
-# Script to submit jobs on Ares cluster via slurm using containers
+# Script to submit jobs on HPC cluster via slurm using containers
 #######################################################################
 usage () {
   echo "------------------------------------------------"
   echo "ERROR: $1"
   echo "------------------------------------------------"
-  echo "Description: Script to submit SLURM jobs on Ares cluster using ND280 highland2 analysis package installed on a Singularity container."
+  echo "Description: Script to submit SLURM jobs on HPC cluster using ND280 highland2 analysis package installed on a Singularity container."
   echo "Usage: $0 [ANALYSISNAME] [ANALYSISVER] [FILELIST] [NJOBS] [WALLHOURS] [WALLMINUTES] [PMEM]"
   echo ""
   echo "ANALYSISNAME - name of the highland analysis package (eg. highland2ControlSamples/stoppingControlSamples, numuCCAnalysis, etc.)"
@@ -27,13 +27,13 @@ usage () {
   exit 1
 }
 #############################################################################################
-# Hard-coded additional arguments - paths to ND280 software. They have to be modified here...
+# Hard-coded additional arguments - mainly paths to software. They have to be modified here...
 #############################################################################################
-#Directory with containers on Ares
+#Directory with containers on HPC cluster
 CONTAINERDIR=/net/pr2/projects/plgrid/plggt2k/containers
 #Name of the actual container that you would like to use
 CONTAINERNAME=centos7-superxsllhfitter-t2kreweight-highland-matchingControlSamples-stoppingControlSamples.sif
-#Grant ID on Ares
+#Grant ID on HPC
 GRANTID=plggt2k2022ares-cpu
 #Directory with highland2 installation in container
 HIGHLAND2INSTALLATIONDIR=/usr/local/t2k/current
