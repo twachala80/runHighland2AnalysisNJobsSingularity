@@ -1,6 +1,6 @@
 #!/bin/sh
 #######################################################################
-# Script to submit jobs on Ares cluster via slurm using T2K containers
+# Script to submit jobs on Ares cluster via slurm using containers
 #######################################################################
 usage () {
   echo "------------------------------------------------"
